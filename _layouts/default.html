@@ -37,9 +37,9 @@
       {% include search.html %}
     {% endunless %}
 
-    {% unless site.show_bottom_menu %}
+    {% if site.show_bottom_menu %}
       {% include menu.html %}
-    {% endunless %}
+    {% endif %}
 
     {% unless site.hide_credits %}
       <aside class="site-credits">
