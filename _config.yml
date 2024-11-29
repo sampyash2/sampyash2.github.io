@@ -46,3 +46,5 @@ paginate_path: "/page/:num/"
 
 hide_search: true
 # hide_credits: true
+show_top_menu: false
+show_bottom_menu: false
