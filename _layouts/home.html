@@ -2,13 +2,15 @@
 layout: default
 ---
 
-{% if site.data.menu and site.paginate and site.paginate_path and paginator.page > 1 %}
+{% if site.data.menu and site.paginate and site.paginate_path and paginator.page > 1 and site.show_top_menu %}
   {% include menu.html %}
 {% elsif site.paginate and site.paginate_path and paginator.page > 1 %}
   {% include back-link.html %}
 {% else %}
   <header class="site-masthead">
-    {% include menu.html %}
+    {% if site.show_top_menu %}
+      {% include menu.html %}
+    {% endif %}
     {% if site.title %}
       <h1>
         {{ site.title }}
